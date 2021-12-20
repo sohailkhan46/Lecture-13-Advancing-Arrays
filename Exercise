@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+        int courses[5];
+         
+        for (int i = 0; i < 5; i++) {
+        cout << "Input the " << i + 1 << " number" << endl;
+
+        cin >> courses[i];
+        while (cin.fail()) {
+
+            cout << "incorrect value, enter the number again\n";
+            cin.clear();
+
+            cin.ignore();
+            cin >> courses[i];
+        }
+    }
+        cout << "the numbers are: \n";
+    
+       for (auto course : courses) {//range based for loop
+        cout << course << endl;
+    }
+
+    return 0;
+
+}
+
+
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+ int main()
+{
+	string snacks[5][5] = {
+
+		{"_","_","_","_","_"}, //1 row
+	{"_", "O", "_", "O", "_"}, //2 row
+	{"_", "@", "@", "@", "_"}, //3 row
+	{"_", "^", "^", "^", "_"}, //4 row
+	{"_", "V", "V", "V","_" } //5 row
+	};
+
+	for (int i = 0; i < 5; i++)
+	{
+		  cout << endl;
+
+		  for (int y = 0; y < 5; y++)
+			cout << snacks[i][y];
+	}
+	cout << endl;
+
+	return 0;
+}
